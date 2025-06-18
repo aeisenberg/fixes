@@ -1,9 +1,9 @@
 console.log("hi")
 
-// TODO sanitize the string by importing the sanitize library
-const params = new URLSearchParams(window.location.search);
-const user = params.get("user");
-const welcome = document.querySelector("#welcome");
-
-welcome.innerHTML = `Welcome back, ${user}!`;
-
+function setLanguageOptions() {
+    // TODO sanitize the string by importing the sanitize library
+    var href = document.location.href,
+        deflt = href.substring(href.indexOf("default=")+8);
+    document.write("<OPTION value=1>"+deflt+"</OPTION>");
+    document.write("<OPTION value=2>English</OPTION>");
+}
